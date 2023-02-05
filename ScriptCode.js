@@ -354,7 +354,7 @@ bot1.style.opacity = "0%";
 }
 
 
-function activateBotWithRandomHTTPProxy() {
+function activateBot() {
   const proxyUrls = [
     "http://209.97.150.167:808",
     "http://118.27.113.167:8080",
