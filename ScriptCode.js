@@ -356,9 +356,9 @@ bot1.style.opacity = "0%";
 
 function activateBotWithRandomHTTPProxy() {
   const proxyUrls = [
-    "http://209.97.150.167:8080",
-    "http://167.71.5.83:8080",
-    "http://174.70.1.210:8080"
+    "http://209.97.150.167:808",
+    "http://118.27.113.167:8080",
+    "http://198.59.191.234:8080"
   ];
 
   const randomIndex = Math.floor(Math.random() * proxyUrls.length);
