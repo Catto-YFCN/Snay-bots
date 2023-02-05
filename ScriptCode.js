@@ -354,25 +354,31 @@ bot1.style.opacity = "0%";
 }
 
 
-function activateBot() {
+function activateBotWithRandomHTTPProxy() {
+  const proxyUrls = [
+    "http://209.97.150.167:8080",
+    "http://167.71.5.83:8080",
+    "http://174.70.1.210:8080"
+  ];
 
-bot1.src = "https://www.snay.io";
-bot1.style.top = "950px";
-document.querySelector("#HUD").appendChild(bot1);
+  const randomIndex = Math.floor(Math.random() * proxyUrls.length);
+  const proxyUrl = proxyUrls[randomIndex];
 
-setTimeout(function() {bot1.contentDocument.querySelector(".transBot").click();}, 4000);
+  bot1.src = `${proxyUrl}/https://www.snay.io`;
+  bot1.style.top = "950px";
+  document.querySelector("#HUD").appendChild(bot1);
 
+  setTimeout(function() {
+    bot1.contentDocument.querySelector(".transBot").click();
+  }, 4000);
 
-bot2.src = "https://www.snay.io";
-bot2.style.top = "950px";
-document.querySelector("#HUD").appendChild(bot2);
+  bot2.src = `${proxyUrl}/https://www.snay.io`;
+  bot2.style.top = "950px";
+  document.querySelector("#HUD").appendChild(bot2);
 
-setTimeout(function() {bot2.contentDocument.querySelector(".transBot").click();}, 4000);
-
-
-
-
-
+  setTimeout(function() {
+    bot2.contentDocument.querySelector(".transBot").click();
+  }, 4000);
 }
 
 
